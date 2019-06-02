@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelGry", "ClassLibrary1\M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProjectModelGry", "UnitTestProject1\UnitTestProjectModelGry.csproj", "{F8D4616E-587F-4C93-A76F-5B76048B12F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{F1D7E6BE-7BB3-4674-9E3E-EA42519BEC94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F8D4616E-587F-4C93-A76F-5B76048B12F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8D4616E-587F-4C93-A76F-5B76048B12F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8D4616E-587F-4C93-A76F-5B76048B12F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1D7E6BE-7BB3-4674-9E3E-EA42519BEC94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1D7E6BE-7BB3-4674-9E3E-EA42519BEC94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1D7E6BE-7BB3-4674-9E3E-EA42519BEC94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1D7E6BE-7BB3-4674-9E3E-EA42519BEC94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

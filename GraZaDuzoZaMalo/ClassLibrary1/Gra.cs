@@ -1,9 +1,8 @@
 ﻿using System;
 
-
 namespace ModelGry
 {
-    public class Gra
+    public partial class Gra
     {
         //innertypes
         public enum Odpowiedz
@@ -48,20 +47,24 @@ namespace ModelGry
             wylosowana = Losuj(ZakresOd, ZakresDo);
             //LicznikRuchow =0;
             StanGry = State.Trwa;
+            historia = new List<int>();
         }
 
         public Odpowiedz Ocena(int propozycja)
         {
             LicznikRuchow++;
+            Odpowiedz odp;
             if (propozycja < wylosowana)
-                return Odpowiedz.ZaMalo;
+                odp = Odpowiedz.ZaMalo;
             else if (propozycja > wylosowana)
-                return Odpowiedz.ZaDuzo;
+                odp = Odpowiedz.ZaDuzo;
             else
             {
                 StanGry = State.Odgadnieta;
-                return Odpowiedz.Trafiono;
+                odp = Odpowiedz.Trafiono;
             }
+            historia.Add(new Ruch(propozycja, odp));
+            return odp;
         } 
         public void Poddaj()
         {
