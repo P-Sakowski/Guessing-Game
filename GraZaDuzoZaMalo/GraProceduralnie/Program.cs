@@ -95,7 +95,7 @@ namespace GraMonolitycznie
                 Console.WriteLine($"Przyjąłem wartość {propozycja}");
                 string wynik = Ocena(propozycja);
                 Console.WriteLine(wynik);
-                if (wynik == "trafiono")
+                if (wynik == "Trafiono!")
                     break;
 
             }
@@ -103,6 +103,7 @@ namespace GraMonolitycznie
             //do momentu trafienia
 
             Console.WriteLine("Koniec gry");
+            Console.ReadKey();
         }
     }
 }

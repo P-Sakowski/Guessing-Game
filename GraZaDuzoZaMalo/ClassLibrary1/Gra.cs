@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ModelGry
 {
@@ -39,15 +40,15 @@ namespace ModelGry
         }
         // historia gry: do zrobienia
         public int LicznikRuchow { get; private set; } = 0;
-    
+
         public Gra(int a, int b)
         {
             ZakresOd = Math.Min(a, b);
             ZakresDo = Math.Max(a, b);
             wylosowana = Losuj(ZakresOd, ZakresDo);
-            //LicznikRuchow =0;
+            //LicznikRuchow = 0;
             StanGry = State.Trwa;
-            historia = new List<int>();
+            historia = new List<Ruch>();
         }
 
         public Odpowiedz Ocena(int propozycja)
@@ -65,7 +66,7 @@ namespace ModelGry
             }
             historia.Add(new Ruch(propozycja, odp));
             return odp;
-        } 
+        }
         public void Poddaj()
         {
                 StanGry = State.Poddana;

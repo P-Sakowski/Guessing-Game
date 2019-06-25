@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelGry", "ClassLibrary1\M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProjectModelGry", "UnitTestProject1\UnitTestProjectModelGry.csproj", "{F8D4616E-587F-4C93-A76F-5B76048B12F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{F1D7E6BE-7BB3-4674-9E3E-EA42519BEC94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraGUI", "WindowsFormsApp1\GraGUI.csproj", "{F1D7E6BE-7BB3-4674-9E3E-EA42519BEC94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
