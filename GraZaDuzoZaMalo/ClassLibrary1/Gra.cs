@@ -46,7 +46,7 @@ namespace ModelGry
             ZakresOd = Math.Min(a, b);
             ZakresDo = Math.Max(a, b);
             wylosowana = Losuj(ZakresOd, ZakresDo);
-            //LicznikRuchow = 0;
+            LicznikRuchow = 0;
             StanGry = State.Trwa;
             historia = new List<Ruch>();
         }

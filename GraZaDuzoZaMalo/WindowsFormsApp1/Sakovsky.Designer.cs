@@ -1,6 +1,6 @@
 ﻿namespace GraGUI
 {
-    partial class Form1
+    partial class Sakovsky
     {
         /// <summary>
         /// Required designer variable.
@@ -40,16 +40,21 @@
             this.textBoxCheck = new System.Windows.Forms.TextBox();
             this.buttonCheck = new System.Windows.Forms.Button();
             this.groupBoxGra = new System.Windows.Forms.GroupBox();
+            this.labelGiveUp = new System.Windows.Forms.Label();
+            this.labelCounter = new System.Windows.Forms.Label();
             this.buttonGiveUp = new System.Windows.Forms.Button();
             this.labelScore = new System.Windows.Forms.Label();
             this.labelOcena = new System.Windows.Forms.Label();
-            this.labelCounter = new System.Windows.Forms.Label();
+            this.buttonNewGame = new System.Windows.Forms.Button();
+            this.buttonMenu = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.groupBoxLosuj.SuspendLayout();
             this.groupBoxGra.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonNowaGra
             // 
+            this.buttonNowaGra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonNowaGra.Location = new System.Drawing.Point(13, 13);
             this.buttonNowaGra.Name = "buttonNowaGra";
             this.buttonNowaGra.Size = new System.Drawing.Size(75, 23);
@@ -65,7 +70,7 @@
             this.groupBoxLosuj.Controls.Add(this.labelDo);
             this.groupBoxLosuj.Controls.Add(this.textBoxOd);
             this.groupBoxLosuj.Controls.Add(this.labelOd);
-            this.groupBoxLosuj.Location = new System.Drawing.Point(13, 52);
+            this.groupBoxLosuj.Location = new System.Drawing.Point(15, 59);
             this.groupBoxLosuj.Name = "groupBoxLosuj";
             this.groupBoxLosuj.Size = new System.Drawing.Size(302, 100);
             this.groupBoxLosuj.TabIndex = 1;
@@ -75,7 +80,8 @@
             // 
             // buttonLosuj
             // 
-            this.buttonLosuj.Location = new System.Drawing.Point(207, 40);
+            this.buttonLosuj.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonLosuj.Location = new System.Drawing.Point(205, 39);
             this.buttonLosuj.Name = "buttonLosuj";
             this.buttonLosuj.Size = new System.Drawing.Size(75, 23);
             this.buttonLosuj.TabIndex = 2;
@@ -142,6 +148,7 @@
             // 
             // buttonCheck
             // 
+            this.buttonCheck.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCheck.Location = new System.Drawing.Point(205, 53);
             this.buttonCheck.Name = "buttonCheck";
             this.buttonCheck.Size = new System.Drawing.Size(75, 23);
@@ -152,6 +159,7 @@
             // 
             // groupBoxGra
             // 
+            this.groupBoxGra.Controls.Add(this.labelGiveUp);
             this.groupBoxGra.Controls.Add(this.labelCounter);
             this.groupBoxGra.Controls.Add(this.buttonGiveUp);
             this.groupBoxGra.Controls.Add(this.labelScore);
@@ -162,16 +170,39 @@
             this.groupBoxGra.Controls.Add(this.labelStartInfo);
             this.groupBoxGra.Location = new System.Drawing.Point(15, 165);
             this.groupBoxGra.Name = "groupBoxGra";
-            this.groupBoxGra.Size = new System.Drawing.Size(299, 199);
+            this.groupBoxGra.Size = new System.Drawing.Size(299, 208);
             this.groupBoxGra.TabIndex = 6;
             this.groupBoxGra.TabStop = false;
             this.groupBoxGra.Text = "Gra";
             this.groupBoxGra.Visible = false;
             this.groupBoxGra.Enter += new System.EventHandler(this.groupBoxGra_Enter);
             // 
+            // labelGiveUp
+            // 
+            this.labelGiveUp.AutoSize = true;
+            this.labelGiveUp.Location = new System.Drawing.Point(16, 182);
+            this.labelGiveUp.Name = "labelGiveUp";
+            this.labelGiveUp.Size = new System.Drawing.Size(168, 13);
+            this.labelGiveUp.TabIndex = 9;
+            this.labelGiveUp.Text = "Zanim się poddałeś, próbowałeś: ";
+            this.labelGiveUp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelGiveUp.Visible = false;
+            // 
+            // labelCounter
+            // 
+            this.labelCounter.AutoSize = true;
+            this.labelCounter.Location = new System.Drawing.Point(16, 121);
+            this.labelCounter.Name = "labelCounter";
+            this.labelCounter.Size = new System.Drawing.Size(206, 13);
+            this.labelCounter.TabIndex = 8;
+            this.labelCounter.Text = "Zanim odgadłeś odpowiedź, próbowałeś: ";
+            this.labelCounter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelCounter.Visible = false;
+            // 
             // buttonGiveUp
             // 
-            this.buttonGiveUp.Location = new System.Drawing.Point(7, 170);
+            this.buttonGiveUp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonGiveUp.Location = new System.Drawing.Point(7, 147);
             this.buttonGiveUp.Name = "buttonGiveUp";
             this.buttonGiveUp.Size = new System.Drawing.Size(75, 23);
             this.buttonGiveUp.TabIndex = 0;
@@ -181,7 +212,7 @@
             // labelScore
             // 
             this.labelScore.AutoSize = true;
-            this.labelScore.Location = new System.Drawing.Point(60, 92);
+            this.labelScore.Location = new System.Drawing.Point(16, 92);
             this.labelScore.Name = "labelScore";
             this.labelScore.Size = new System.Drawing.Size(40, 13);
             this.labelScore.TabIndex = 7;
@@ -195,28 +226,56 @@
             this.labelOcena.Size = new System.Drawing.Size(0, 13);
             this.labelOcena.TabIndex = 6;
             // 
-            // labelCounter
+            // buttonNewGame
             // 
-            this.labelCounter.AutoSize = true;
-            this.labelCounter.Location = new System.Drawing.Point(16, 121);
-            this.labelCounter.Name = "labelCounter";
-            this.labelCounter.Size = new System.Drawing.Size(206, 13);
-            this.labelCounter.TabIndex = 8;
-            this.labelCounter.Text = "Zanim odgadłeś odpowiedź, próbowałeś: ";
-            this.labelCounter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelCounter.Visible = false;
+            this.buttonNewGame.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNewGame.Location = new System.Drawing.Point(22, 415);
+            this.buttonNewGame.Name = "buttonNewGame";
+            this.buttonNewGame.Size = new System.Drawing.Size(75, 23);
+            this.buttonNewGame.TabIndex = 7;
+            this.buttonNewGame.Text = "Nowa gra";
+            this.buttonNewGame.UseVisualStyleBackColor = true;
+            this.buttonNewGame.Visible = false;
+            this.buttonNewGame.Click += new System.EventHandler(this.buttonNewGame_Click);
             // 
-            // Form1
+            // buttonMenu
+            // 
+            this.buttonMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonMenu.Location = new System.Drawing.Point(120, 415);
+            this.buttonMenu.Name = "buttonMenu";
+            this.buttonMenu.Size = new System.Drawing.Size(75, 23);
+            this.buttonMenu.TabIndex = 8;
+            this.buttonMenu.Text = "Menu";
+            this.buttonMenu.UseVisualStyleBackColor = true;
+            this.buttonMenu.Visible = false;
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonExit.Location = new System.Drawing.Point(218, 415);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(75, 23);
+            this.buttonExit.TabIndex = 9;
+            this.buttonExit.Text = "Wyjdź";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Visible = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // Sakovsky
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 450);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(334, 461);
+            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.buttonMenu);
+            this.Controls.Add(this.buttonNewGame);
             this.Controls.Add(this.groupBoxGra);
             this.Controls.Add(this.groupBoxLosuj);
             this.Controls.Add(this.buttonNowaGra);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "Sakovsky";
+            this.Text = "Sakovsky";
+            this.Load += new System.EventHandler(this.Sakovsky_Load);
             this.groupBoxLosuj.ResumeLayout(false);
             this.groupBoxLosuj.PerformLayout();
             this.groupBoxGra.ResumeLayout(false);
@@ -243,5 +302,9 @@
         private System.Windows.Forms.Label labelScore;
         private System.Windows.Forms.Button buttonGiveUp;
         private System.Windows.Forms.Label labelCounter;
+        private System.Windows.Forms.Label labelGiveUp;
+        private System.Windows.Forms.Button buttonNewGame;
+        private System.Windows.Forms.Button buttonMenu;
+        private System.Windows.Forms.Button buttonExit;
     }
 }
