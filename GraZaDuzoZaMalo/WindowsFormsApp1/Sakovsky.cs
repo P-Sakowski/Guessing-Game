@@ -17,6 +17,7 @@ namespace GraGUI
 
         public Sakovsky()
         {
+            this.Icon = new Icon("Resources/Icon.ico");
             InitializeComponent();
         }
 
