@@ -11,6 +11,7 @@ using ModelGry;
 
 namespace GraGUI
 {
+   
     public partial class Sakovsky : Form
     {
         private Gra gra;
@@ -95,12 +96,21 @@ namespace GraGUI
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
 
         private void buttonNewGame_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            Sakovsky sakovsky = new Sakovsky();
+            sakovsky.Show();
+            this.Dispose(false);
+        }
+
+        private void buttonMenu_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            this.Hide();
+            menu.Show();
         }
     }
 }
