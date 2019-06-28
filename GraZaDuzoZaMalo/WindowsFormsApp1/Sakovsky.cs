@@ -31,16 +31,28 @@ namespace GraGUI
         private void buttonLosuj_Click(object sender, EventArgs e)
         {
             // wczytaj zakres do losowania
-            int a = int.Parse(textBoxOd.Text);
-            int b = int.Parse(textBoxDo.Text);
+            string a = textBoxOd.Text;
+            string b = textBoxDo.Text;
 
-            // utwórz grę
-            gra = new Gra(a, b);
-
-            textBoxOd.Enabled = false;
-            textBoxDo.Enabled = false;
-            buttonLosuj.Enabled = false;
-            groupBoxGra.Visible = true;
+            while (true)
+            {
+                try
+                {
+                    int a2 = Convert.ToInt32(a);
+                    int b2 = Convert.ToInt32(a);
+                    gra = new Gra(a2, b2);
+                    textBoxOd.Enabled = false;
+                    textBoxDo.Enabled = false;
+                    buttonLosuj.Enabled = false;
+                    groupBoxGra.Visible = true;
+                    break;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    break;
+                }
+            }
 
         }
 
@@ -67,30 +79,43 @@ namespace GraGUI
             buttonExit.Visible = true;
         }
 
-        private void buttonCheck_Click(object sender, EventArgs e)
+        public void buttonCheck_Click(object sender, EventArgs e)
         {
-            int c = int.Parse(textBoxCheck.Text);
-            if (gra.Ocena(c).ToString() == "Trafiono")
+            string c = textBoxCheck.Text;
+            while (true)
             {
-                labelCounter.Visible = true;
-                buttonGiveUp.Enabled = false;
-                buttonNewGame.Visible = true;
-                buttonMenu.Visible = true;
-                buttonExit.Visible = true;
-                labelCounter.Text = "Zanim odgadłeś odpowiedź, próbowałeś: " + (gra.LicznikRuchow+1)/2 + " razy";
-                labelScore.Text = "Brawo, trafiłeś! " + textBoxCheck.Text + " to prawidłowa odpowiedź";
-            }
-            else if (gra.Ocena(c).ToString() == "ZaDuzo")
-            {
-                labelScore.Text = "Twoja propozycja: " + textBoxCheck.Text + " jest zbyt dużą liczbą";
-                textBoxCheck.Text = "";
-                textBoxCheck.Focus();
-            }
-            else 
-            {
-                labelScore.Text = "Twoja propozycja: " + textBoxCheck.Text + " jest zbyt małą liczbą";
-                textBoxCheck.Text = "";
-                textBoxCheck.Focus();
+                try
+                {
+                    int c2 = Convert.ToInt32(c);
+                    if (gra.Ocena(c2).ToString() == "Trafiono")
+                    {
+                        labelCounter.Visible = true;
+                        buttonGiveUp.Enabled = false;
+                        buttonNewGame.Visible = true;
+                        buttonMenu.Visible = true;
+                        buttonExit.Visible = true;
+                        labelCounter.Text = "Zanim odgadłeś odpowiedź, próbowałeś: " + (gra.LicznikRuchow + 1) / 2 + " razy";
+                        labelScore.Text = "Brawo, trafiłeś! " + textBoxCheck.Text + " to prawidłowa odpowiedź";
+                    }
+                    else if (gra.Ocena(c2).ToString() == "ZaDuzo")
+                    {
+                        labelScore.Text = "Twoja propozycja: " + textBoxCheck.Text + " jest zbyt dużą liczbą";
+                        textBoxCheck.Text = "";
+                        textBoxCheck.Focus();
+                    }
+                    else
+                    {
+                        labelScore.Text = "Twoja propozycja: " + textBoxCheck.Text + " jest zbyt małą liczbą";
+                        textBoxCheck.Text = "";
+                        textBoxCheck.Focus();
+                    }
+                    break;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    break;
+                }
             }
         }
 
