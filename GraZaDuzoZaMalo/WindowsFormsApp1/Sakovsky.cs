@@ -18,7 +18,14 @@ namespace GraGUI
 
         public Sakovsky()
         {
-            this.Icon = new Icon("Resources/Icon.ico");
+            try
+            {
+                this.Icon = new Icon("Resources/Icon.ico");
+            }
+            catch (Exception dirEx)
+            {
+            }
+
             InitializeComponent();
         }
 
@@ -38,8 +45,8 @@ namespace GraGUI
             {
                 try
                 {
-                    int a2 = Convert.ToInt32(a);
-                    int b2 = Convert.ToInt32(a);
+                    int a2 = int.Parse(a);
+                    int b2 = int.Parse(b);
                     gra = new Gra(a2, b2);
                     textBoxOd.Enabled = false;
                     textBoxDo.Enabled = false;
@@ -86,7 +93,7 @@ namespace GraGUI
             {
                 try
                 {
-                    int c2 = Convert.ToInt32(c);
+                    int c2 = int.Parse(c);
                     if (gra.Ocena(c2).ToString() == "Trafiono")
                     {
                         labelCounter.Visible = true;

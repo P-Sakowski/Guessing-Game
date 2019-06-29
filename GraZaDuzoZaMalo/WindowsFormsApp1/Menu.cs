@@ -14,7 +14,13 @@ namespace GraGUI
     {
         public Menu()
         {
-            this.Icon = new Icon("Resources/Icon.ico");
+            try
+            {
+                this.Icon = new Icon("Resources/Icon.ico");
+            }
+            catch (Exception dirEx)
+            {
+            }
             InitializeComponent();
         }
 
